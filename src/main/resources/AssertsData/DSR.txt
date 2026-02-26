@@ -1,0 +1,15 @@
+WhatIDidToday = Attended the stand-up call, Retested the WMS-6635 impacted regression scenarios after the fix.
+WhatIPlannedForTomorrow  = Will attend daily catch-up call, Will continue regression testing for WMS-6635 impacted scenarios.
+
+email = salmanm@adaps.com
+EmployeeID = AIN192
+In-Time = 06:00
+Out-Time = 15:00
+ProjectName = MPFC
+FullTime/Support= Full-Time
+HoursAssigned = 8
+HoursWorked = 8
+WorkType = Standard
+
+
+

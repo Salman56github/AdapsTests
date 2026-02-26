@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0;
+            border-top: 4px solid black;
+            border-bottom: 1px solid #999999;
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+        }
+
+        .section-header {
+            background-color: #3399ff;
+            color: white;
+            padding: 3px;
+            font-weight: bold;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            padding: 4px;
+            text-align: left;
+            background-color: #f2f2f2;
+            border: 1px solid black;
+        }
+
+        tr {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<p>Hi Parvathi,</p>
+<p>Please have a look at my status report.</p>
+
+<!-- Section: What did we do this day? -->
+<table style="width: 1000px;" class="section-header">
+    <tr>
+        <td>What did we do this day?</td>
+    </tr>
+</table>
+<table style="width: 1000px;">
+    <tr>
+        <td>
+            <ul id="today-tasks"></ul>
+        </td>
+    </tr>
+</table>
+
+<!-- Section: What is planned for next day? -->
+<table style="width: 1000px;" class="section-header">
+    <tr>
+        <td>What is planned for next day?</td>
+    </tr>
+</table>
+<table style="width: 1000px;">
+    <tr>
+        <td>
+            <ul id="nextday-tasks"></ul>
+        </td>
+    </tr>
+</table>
+
+<!-- Section: Impediments -->
+<table style="width: 1000px;" class="section-header">
+    <tr>
+        <td>Impediments</td>
+    </tr>
+</table>
+<table style="width: 1000px;">
+    <thead>
+    <tr>
+        <th>Sl. No.</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Start Date</th>
+        <th>Owner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>
+
+<br>
+<p>Best regards,</p>
+<p>
+    <span style="color:blue;">
+        <b>Mohammad Salman Khan</b><br>
+        Test Engineer<br>
+        Divyasree Trinity, Level 2, C-Wing, Plot No: 5&6<br>
+        Madhapur, Hitec City Road, Hyderabad 500081<br>
+        <b>P</b>: 7995.645.056 |
+        <b>E</b>: <span style="color:blue; text-decoration: underline;">salmanm@adaps.com</span> |
+        <b><span style="color:blue;">W</span></b>: <a href="https://www.adaps.com" style="text-decoration:underline; color:blue;">www.adaps.com</a>
+    </span>
+</p>
+
+<script>
+
+    const todayTasks = [
+        "Gone through Playwright with TypeScript.",
+        "Attended session with Rajesh.",
+        "Gone through Java OOPs concepts."
+    ];
+
+    const nextDayTasks = [
+        "Will continue exploring on Playwright automation."
+    ];
+
+    // Utility function to populate bullet points
+    function populateList(listId, items) {
+        const ul = document.getElementById(listId);
+        items.forEach(item => {
+            if (item && item.trim() !== "") {
+                const li = document.createElement("li");
+                li.textContent = item;
+                ul.appendChild(li);
+            }
+        });
+    }
+
+    // Populate both sections
+    populateList("today-tasks", todayTasks);
+    populateList("nextday-tasks", nextDayTasks);
+</script>
+
+</body>
+</html>
